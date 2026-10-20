@@ -2,7 +2,6 @@ package com.todo.TODOL.controller;
 
 import com.todo.TODOL.entities.Task;
 import com.todo.TODOL.services.TaskService;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,10 +17,9 @@ public class RestTaskController {
 
     @GetMapping
     @RequestMapping ("/getTasks")
-    public List<Task> getTasks(Model model){
-        List<Task> tasks = taskService.getAllTasks();
+    public List<Task> getTasks(){
 
-        return tasks;
+        return taskService.getAllTasks();
     }
 
     @PostMapping
