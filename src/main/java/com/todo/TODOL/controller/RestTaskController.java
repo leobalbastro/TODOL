@@ -14,7 +14,6 @@ public class RestTaskController {
         this.taskService = taskService;
     }
 
-
     @GetMapping
     @RequestMapping ("/getTasks")
     public List<Task> getTasks(){
